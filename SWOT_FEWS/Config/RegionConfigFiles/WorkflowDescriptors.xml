@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflowDescriptors xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/workflowDescriptors.xsd" version="1.0">
+	<workflowDescriptor id="ImportSWOT" name="Import SWOT" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportSWOT_AB" name="Import SWOT AB" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportSWOT_BC" name="Import SWOT BC" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportSWOT_MB" name="Import SWOT MB" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportSWOT_ON" name="Import SWOT ON" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportSWOT_QC" name="Import SWOT QC" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportSWOT_SK" name="Import SWOT SK" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportWSC" name="Import WSC" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportWSC_AB" name="Import WSC AB" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportWSC_BC" name="Import WSC BC" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportWSC_MB" name="Import WSC MB" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportWSC_ON" name="Import WSC ON" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportWSC_QC" name="Import WSC QC" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ImportWSC_SK" name="Import WSC SK" visible="true" forecast="false" autoApprove="true" allowApprove="true"/>
+	<workflowDescriptor id="ProcessSWOT" name="Process SWOT" visible="true" forecast="true" autoApprove="true" allowApprove="true"/>
+</workflowDescriptors>

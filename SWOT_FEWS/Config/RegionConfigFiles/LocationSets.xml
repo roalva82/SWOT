@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locationSets version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/locationSets.xsd">
+	<locationSet id="WSC_Gauges">
+		<esriShapeFile>
+			<file>selected</file>
+			<geoDatum>WGS 1984</geoDatum>
+			<id>%STATION_NU%</id>
+			<name>%STATION_NA%</name>
+			<x>%LONGITUDE%</x>
+			<y>%LATITUDE%</y>
+			<attribute id="SWOT_NODE">
+				<text>%node_id%</text>
+			</attribute>
+			<attribute id="SWOT_REACH">
+				<text>%reach_id%</text>
+			</attribute>
+			<attribute id="PROV">
+				<text>%PROV_TERR_%</text>
+			</attribute>
+			<attribute id="DATUM_TO">
+				<number>%STN_DATU_1%</number>
+			</attribute>
+			<attribute id="ELEVATION_WSC">
+				<number>%STN_DATU_2%</number>
+			</attribute>
+			<attribute id="CGVD2013">
+				<number>%CGVD20131%</number>
+			</attribute>
+			<attribute id="CGVD28">
+				<number>%CGVD281%</number>
+			</attribute>
+			<attribute id="EGM2008">
+				<number>%EGM20081%</number>
+			</attribute>
+		</esriShapeFile>
+	</locationSet>
+	<locationSet id="SWOT_Nodes">
+		<csvFile>
+			<file>swot_nodes</file>
+			<id>%node_id%</id>
+			<x>%LONGITUDE%</x>
+			<y>%LATITUDE%</y>
+			<attribute id="STATION_NU">
+				<text>%STATION_NU%</text>
+			</attribute>
+			<attribute id="PROV">
+				<text>%PROV_TERR_%</text>
+			</attribute>
+		</csvFile>
+	</locationSet>
+	<locationSet id="WSC_AB">
+		<locationSetId>WSC_Gauges</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="AB"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="WSC_BC">
+		<locationSetId>WSC_Gauges</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="BC"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="WSC_MB">
+		<locationSetId>WSC_Gauges</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="MB"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="WSC_ON">
+		<locationSetId>WSC_Gauges</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="ON"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="WSC_QC">
+		<locationSetId>WSC_Gauges</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="QC"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="WSC_SK">
+		<locationSetId>WSC_Gauges</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="SK"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="SWOT_Nodes_AB">
+		<locationSetId>SWOT_Nodes</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="AB"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="SWOT_Nodes_BC">
+		<locationSetId>SWOT_Nodes</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="BC"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="SWOT_Nodes_MB">
+		<locationSetId>SWOT_Nodes</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="MB"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="SWOT_Nodes_ON">
+		<locationSetId>SWOT_Nodes</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="ON"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="SWOT_Nodes_QC">
+		<locationSetId>SWOT_Nodes</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="QC"/>
+		</constraints>
+	</locationSet>
+	<locationSet id="SWOT_Nodes_SK">
+		<locationSetId>SWOT_Nodes</locationSetId>
+		<constraints>
+			<attributeTextEquals id="PROV" equals="SK"/>
+		</constraints>
+	</locationSet>
+</locationSets>

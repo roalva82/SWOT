@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>generalCSV</importType>
+			<folder>$REGION_HOME$/Modules/WSC/csv_data/</folder>
+			<fileNamePatternFilter>data_hist_API_WSC_*</fileNamePatternFilter>
+			<table>
+				<dateTimeColumn name="DATE" pattern="yyyy-MM-dd"/>
+				<locationColumn name="STATION_NUMBER"/>
+				<valueColumn name="LEVEL" parameterId="H.obs"/>
+				<valueColumn name="DISCHARGE" parameterId="Q.obs"/>
+			</table>
+			<missingValue>-999.0</missingValue>
+			<importTimeZone>
+				<timeZoneOffset>$TIMEZONEOFFSET$</timeZoneOffset>
+			</importTimeZone>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportWSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>H.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportWSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>Q.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</import>
+	<import>
+		<general>
+			<importType>generalCSV</importType>
+			<folder>$REGION_HOME$/Modules/WSC/csv_data/</folder>
+			<fileNamePatternFilter>data_realtime_WSC_*</fileNamePatternFilter>
+			<table>
+				<dateTimeColumn name="Date" pattern="yyyy-MM-dd HH:mm:SS+00:00"/>
+				<locationColumn name="ID"/>
+				<valueColumn name="Value/Valeur"/>
+				<parameterColumn name="Parameter"/>
+			</table>
+			<missingValue>-999.0</missingValue>
+			<importTimeZone>
+				<timeZoneOffset>$TIMEZONEOFFSET$</timeZoneOffset>
+			</importTimeZone>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportWSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>H.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportWSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>Q.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</import>
+	<import>
+		<general>
+			<importType>generalCSV</importType>
+			<folder>$REGION_HOME$/Modules/WSC/csv_data/</folder>
+			<fileNamePatternFilter>data_hist_WSC_*</fileNamePatternFilter>
+			<table>
+				<dateTimeColumn name="Date" pattern="yyyy-MM-dd"/>
+				<locationColumn name="ID"/>
+				<valueColumn name="Value/Valeur"/>
+				<parameterColumn name="Parameter"/>
+			</table>
+			<missingValue>-999.0</missingValue>
+			<importTimeZone>
+				<timeZoneOffset>$TIMEZONEOFFSET$</timeZoneOffset>
+			</importTimeZone>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportWSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>H.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportWSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>Q.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="hour" multiplier="1"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</import>
+</timeSeriesImportRun>

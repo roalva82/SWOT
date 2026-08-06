@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.4
+Created-By: 11.0.9+11-LTS (Amazon.com Inc.)
+Implementation-Title: DELFT-FEWS
+Implementation-Version: 2020.02
+Implementation-Vendor: Deltares
+Build-Type: stable
+Build-Subtype: none
+Build-Time: September 15 2021, 10:30 AM
+Build-Agent: C-TEAMCITY0920
+Build-JDK:  11.0.9
+Sources-Version: 106037
+

@@ -1,0 +1,128 @@
+<timeSeriesDisplay xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/timeSeriesDisplay.xsd" version="1.0">
+	<defaultViewPeriod unit="day" start="-20" end="14"/>
+	<timeMarkersDisplayConfig>
+		<timeMarkerDisplayOptions marker="systemTime">
+			<color>green</color>
+			<lineStyle>solid</lineStyle>
+		</timeMarkerDisplayOptions>
+		<timeMarkerDisplayOptions marker="timeZero">
+			<color>gray</color>
+			<lineStyle>none</lineStyle>
+		</timeMarkerDisplayOptions>
+		<timeMarkerDisplayOptions marker="displayTime">
+			<color>red</color>
+			<lineStyle>solid</lineStyle>
+		</timeMarkerDisplayOptions>
+		<timeMarkerDisplayOptions marker="threshold">
+			<color>orange</color>
+			<lineStyle>dashed</lineStyle>
+		</timeMarkerDisplayOptions>
+	</timeMarkersDisplayConfig>
+	<parametersDisplayConfig>
+		<parameterDisplayOptions id="H.obs">
+			<preferredColor>black</preferredColor>
+			<lineStyle>solid</lineStyle>
+			<markerStyle>circle</markerStyle>
+			<markerSize>3</markerSize>
+		</parameterDisplayOptions>
+		<parameterDisplayOptions id="Q.obs">
+			<preferredColor>black</preferredColor>
+			<lineStyle>solid</lineStyle>
+			<markerStyle>circle</markerStyle>
+			<markerSize>3</markerSize>
+		</parameterDisplayOptions>
+	</parametersDisplayConfig>
+	<statisticalFunctions>
+		<statisticalFunction function="cumulative" ignoreMissings="true">
+		<lineStyle>constant</lineStyle>
+		<allowedInputParameterId>P.obs</allowedInputParameterId>
+		</statisticalFunction>
+		<statisticalFunction function="durationNonExceedence" ignoreMissings="true"/>
+		<statisticalFunction function="doubleMassCurve"/>
+		<statisticalFunction function="showPeaksAbove"/>
+		<statisticalFunction function="showLowsBelow"/>
+		<statisticalFunction function="boxPlot"/>
+		<statisticalFunction function="gaussianCurve"/>
+		<statisticalFunction function="frequencyDistribution">
+			<samples amount="20"/>
+			<samples amount="40"/>
+			<samples amount="60"/>
+			<samples amount="80"/>
+			<samples amount="100"/>
+		</statisticalFunction>
+		<statisticalFunction function="movingAverage" ignoreMissings="true">
+			<movingAccumulationTimeSpan unit="hour" multiplier="1"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="4"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="8"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="4"/>
+			<movingAccumulationTimeSpan unit="week" multiplier="1"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="30"/>
+		</statisticalFunction>
+		<statisticalFunction function="accumulationAggregation" ignoreMissings="true">
+			<movingAccumulationTimeSpan unit="hour" multiplier="1"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="4"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="8"/>
+			<movingAccumulationTimeSpan unit="hour" multiplier="12"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="1"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="2"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="4"/>
+			<movingAccumulationTimeSpan unit="week" multiplier="1"/>
+			<movingAccumulationTimeSpan unit="day" multiplier="30"/>
+		</statisticalFunction>
+		<statisticalFunction function="scatterPlot"/>
+	</statisticalFunctions>
+	<descriptiveFunctionGroups>
+		<descriptiveFunctionGroup name="Percentile">
+			<descriptiveFunction function="mean" ignoreMissings="true"/>
+			<descriptiveFunction function="min"/>
+			<descriptiveFunction function="max"/>
+			<descriptiveFunction function="sum" ignoreMissings="true"/>
+			<descriptiveFunction function="standardDeviation" ignoreMissings="true"/>
+			<descriptiveFunction function="percentileExceedence">
+				<value>5</value>
+				<value>25</value>
+				<value>50</value>
+				<value>75</value>
+				<value>95</value>
+			</descriptiveFunction>
+		</descriptiveFunctionGroup>
+		<descriptiveFunctionGroup name="Time series info">
+			<descriptiveFunction function="infoLocationId"/>
+			<descriptiveFunction function="infoLocationName"/>
+			<descriptiveFunction function="infoParameterId"/>
+			<descriptiveFunction function="infoParameterName"/>
+			<descriptiveFunction function="infoModuleinstance"/>
+			<descriptiveFunction function="startTime"/>
+			<descriptiveFunction function="endTime"/>
+		</descriptiveFunctionGroup>
+		<descriptiveFunctionGroup name="Data quality">
+			<descriptiveFunction function="count"/>
+			<descriptiveFunction function="completed"/>
+			<descriptiveFunction function="corrected"/>
+			<descriptiveFunction function="reliables"/>
+			<descriptiveFunction function="doubtfuls"/>
+			<descriptiveFunction function="unreliables"/>
+			<descriptiveFunction function="missings"/>
+		</descriptiveFunctionGroup>
+	</descriptiveFunctionGroups>
+	<defaultGraphicalEditMode>interpolateBetweenSelectedPoints</defaultGraphicalEditMode>
+	<resampling>
+		<timeStep label="minute" unit="minute"/>
+		<timeStep label="5 minutes" unit="minute" multiplier="5"/>
+		<timeStep label="10 minutes" unit="minute" multiplier="10"/>
+		<timeStep label="15 minutes" unit="minute" multiplier="15"/>
+		<timeStep label="30 minutes" unit="minute" multiplier="30"/>
+		<timeStep label="hour" unit="hour"/>
+		<timeStep label="2 hour" unit="hour" multiplier="2"/>
+		<timeStep label="3 hour" unit="hour" multiplier="3"/>
+		<timeStep label="6 hour" unit="hour" multiplier="6"/>
+		<timeStep label="12 hour" unit="hour" multiplier="12"/>
+		<timeStep label="day" unit="day"/>
+		<timeStep label="week" unit="week"/>
+		<timeStep label="month" unit="month"/>
+		<timeStep label="year" unit="year"/>
+	</resampling>
+</timeSeriesDisplay>

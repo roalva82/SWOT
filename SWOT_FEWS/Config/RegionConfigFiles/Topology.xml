@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<topology xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/topology.xsd">
+	<enableAutoRun>false</enableAutoRun>
+	<enableAutoSelectParameters>true</enableAutoSelectParameters>
+	<enableSelectNodesFromMap>false</enableSelectNodesFromMap>
+	<nodes id="Import">
+		<nodes id="ImportSWOT">
+			<node id="ImportSWOT_AB" name="Import AB SWOT">
+				<workflowId>ImportSWOT_AB</workflowId>
+				<localRun>false</localRun>
+			</node>
+			<node id="ImportSWOT_BC" name="Import BC SWOT">
+				<workflowId>ImportSWOT_BC</workflowId>
+				<localRun>false</localRun>
+			</node>
+			<node id="ImportSWOT_MB" name="Import MB SWOT">
+				<workflowId>ImportSWOT_MB</workflowId>
+				<localRun>false</localRun>
+			</node>
+			<node id="ImportSWOT_ON" name="Import ON SWOT">
+				<workflowId>ImportSWOT_ON</workflowId>
+				<localRun>false</localRun>
+			</node>
+			<node id="ImportSWOT_QC" name="Import QC SWOT">
+				<workflowId>ImportSWOT_QC</workflowId>
+				<localRun>false</localRun>
+			</node>
+			<node id="ImportSWOT_SK" name="Import SK SWOT">
+				<workflowId>ImportSWOT_SK</workflowId>
+				<localRun>false</localRun>
+			</node>
+		</nodes>
+		<nodes id="ImportWSC">
+			<node id="ImportWSC_AB" name="Import AB WSC">
+				<workflowId>ImportWSC_AB</workflowId>
+				<localRun>false</localRun>
+			</node>
+			<node id="ImportWSC_BC" name="Import BC WSC">
+				<workflowId>ImportWSC_BC</workflowId>
+				<localRun>false</localRun>
+			</node>
+			<node id="ImportWSC_MB" name="Import MB WSC">
+				<workflowId>ImportWSC_MB</workflowId>
+				<localRun>false</localRun>
+			</node>
+			<node id="ImportWSC_ON" name="Import ON WSC">
+				<workflowId>ImportWSC_ON</workflowId>
+				<localRun>false</localRun>
+			</node>
+			<node id="ImportWSC_QC" name="Import QC WSC">
+				<workflowId>ImportWSC_QC</workflowId>
+				<localRun>false</localRun>
+			</node>
+			<node id="ImportWSC_SK" name="Import SK WSC">
+				<workflowId>ImportWSC_SK</workflowId>
+				<localRun>false</localRun>
+			</node>
+		</nodes>
+	</nodes>
+	<nodes id="Process">
+		<node id="ProcessSWOT" name="Process SWOT">
+			<workflowId>ProcessSWOT</workflowId>
+			<localRun>false</localRun>
+		</node>
+	</nodes>
+</topology>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/transformationModule.xsd">
+	<variable>
+		<variableId>WSC_Uncorrected</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportWSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>H.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>temporary</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-3600" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>WSC_Corrected</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ProcessWSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>H.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-3600" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="Shift_to_Local_Time">
+		<timeShift>
+			<constant>
+				<inputVariable>
+					<variableId></variableId>
+				</inputVariable>
+				<numberOfTimeSteps></numberOfTimeSteps>
+				<outputVariable>
+					<variableId></variableId>
+				</outputVariable>
+			</constant>
+		</timeShift>
+	</transformation>
+</transformationModule>

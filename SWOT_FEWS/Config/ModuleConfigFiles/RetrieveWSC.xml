@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generalAdapterRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/generalAdapterRun.xsd">
+	<general>
+		<description>Retrieve WSC data</description>
+		<piVersion>1.8</piVersion>
+		<rootDir>%REGION_HOME%/Modules/WSC</rootDir>
+		<workDir>%ROOT_DIR%</workDir>
+		<exportDir>%ROOT_DIR%</exportDir>
+		<importDir>%ROOT_DIR%</importDir>
+		<dumpFileDir>$DUMP_DIR$</dumpFileDir>
+		<dumpDir>%ROOT_DIR%/work</dumpDir>
+		<diagnosticFile>%ROOT_DIR%/work/piDiagnostic.xml</diagnosticFile>
+	</general>
+	<activities>
+		<executeActivities>
+			<executeActivity>
+				<command>
+					<executable>$PYTHON_EXE$</executable>
+				</command>
+				<arguments>
+					<argument>$REGION_HOME$/Modules/WSC/retrieveWSC.py</argument>
+					<argument>--station</argument>
+					<argument>$LOOP_LOCATION_ID$</argument>
+					<argument>--write</argument>
+				</arguments>
+				<timeOut>300000</timeOut>
+				<waitForOtherRun>true</waitForOtherRun>
+				<ignoreDiagnostics>true</ignoreDiagnostics>
+			</executeActivity>
+		</executeActivities>
+	</activities>
+</generalAdapterRun>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filters version="1.1" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/filters.xsd">
+	<filter id="Import">
+		<child foreignKey="SWOT_Nodes"/>
+		<child foreignKey="WSC_Nodes"/>
+	</filter>
+	<filter id="Process">
+		<child foreignKey="Process_SWOT"/>
+	</filter>
+	<filter id="Process_SWOT" name="SWOT">
+		<timeSeriesSet>
+			<moduleInstanceId>ProcessSWOT</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>H.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-30" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</filter>
+	<filter id="WSC_Nodes" name="WSC">
+		<timeSeriesSet>
+			<moduleInstanceId>ImportWSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>H.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-30" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportWSC</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>Q.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="day" multiplier="1"/>
+			<relativeViewPeriod unit="day" start="-30" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</filter>
+	<filter id="SWOT_Nodes" name="SWOT">
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSWOT</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>wse</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-30" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSWOT</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>width</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-30" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSWOT</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>geoid_hght</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-30" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</filter>
+</filters>

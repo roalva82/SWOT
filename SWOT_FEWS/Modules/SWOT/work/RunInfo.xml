@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Run xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.8">
+    <logLevel>info</logLevel>
+    <timeZone>0.0</timeZone>
+    <startDateTime date="2026-05-29" time="17:00:00"/>
+    <endDateTime date="2026-05-29" time="17:00:00"/>
+    <time0 date="2026-05-29" time="17:00:00"/>
+    <lastObservationDateTime date="2026-05-29" time="17:00:00"/>
+    <workDir>C:\Users\rodol\Documents\projects\SWOT_FEWS\Modules\SWOT</workDir>
+    <outputDiagnosticFile>C:\Users\rodol\Documents\projects\SWOT_FEWS\Modules\SWOT\work\piDiagnostic.xml</outputDiagnosticFile>
+    <properties>
+        <string key="location" value="01AA002"/>
+        <string key="hmsProjectFile" value="C:\Users\rodol\Documents\projects\SWOT_FEWS\Modules\SWOT/work/CV_AA.hms"/>
+    </properties>
+</Run>

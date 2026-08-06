@@ -1,0 +1,6 @@
+create a link by opening ./bin/windows/createShortcuts.exe
+indicate the path to StandAlone clientConfig ./clientConfig.xml
+mark the Region Home option and click on CreateShortcuts
+a file called SWOT_FEWS.lnk should now be available under ./
+double click on it to open the interface
+ 

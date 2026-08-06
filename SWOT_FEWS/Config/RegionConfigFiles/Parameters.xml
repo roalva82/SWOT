@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parameterGroups version="1.0" xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews
+http://fews.wldelft.nl/schemas/version1.0/parameters.xsd">
+	<parameterGroup id="Water Level">
+		<parameterType>instantaneous</parameterType>
+		<unit>m</unit>
+		<valueResolution>0.001</valueResolution>
+		<usesDatum>true</usesDatum>
+		<parameter id="wse" name="wse">
+			<shortName>wse</shortName>
+		</parameter>
+		<parameter id="H.obs" name="H.obs">
+			<shortName>H.obs</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Discharge">
+		<parameterType>instantaneous</parameterType>
+		<unit>m</unit>
+		<valueResolution>0.001</valueResolution>
+		<parameter id="Q.obs" name="Q.obs">
+			<shortName>Q.obs</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Water Width">
+		<parameterType>instantaneous</parameterType>
+		<unit>m</unit>
+		<valueResolution>0.001</valueResolution>
+		<parameter id="width" name="width">
+			<shortName>width</shortName>
+		</parameter>
+	</parameterGroup>
+	<parameterGroup id="Geoid">
+		<parameterType>instantaneous</parameterType>
+		<unit>m</unit>
+		<valueResolution>0.001</valueResolution>
+		<parameter id="geoid_hght" name="geoid_hght">
+			<shortName>geoid_hght</shortName>
+		</parameter>
+	</parameterGroup>
+</parameterGroups>

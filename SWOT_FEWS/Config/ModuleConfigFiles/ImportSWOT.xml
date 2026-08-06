@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeSeriesImportRun xmlns="http://www.wldelft.nl/fews" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/timeSeriesImportRun.xsd">
+	<import>
+		<general>
+			<importType>generalCSV</importType>
+			<folder>$REGION_HOME$/Modules/SWOT/csv_data/</folder>
+			<table>
+				<dateTimeColumn name="time_str" pattern="yyyy-MM-dd HH:mm:ss"/>
+				<locationColumn name="node_id"/>
+				<valueColumn name="wse" parameterId="wse"/>
+				<valueColumn name="width" parameterId="width"/>
+				<valueColumn name="geoid_hght" parameterId="geoid_hght"/>
+			</table>
+			<idMapId>IdImportSWOT</idMapId>
+			<missingValue>-999.0</missingValue>
+			<importTimeZone>
+				<timeZoneName>GMT</timeZoneName>
+			</importTimeZone>
+		</general>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSWOT</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>wse</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSWOT</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>width</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSWOT</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>geoid_hght</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</import>
+</timeSeriesImportRun>

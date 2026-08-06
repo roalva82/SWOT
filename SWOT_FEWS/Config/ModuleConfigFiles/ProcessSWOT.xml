@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformationModule version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews" xsi:schemaLocation="http://www.wldelft.nl/fews http://fews.wldelft.nl/schemas/version1.0/transformationModule.xsd">
+	<variable>
+		<variableId>SWORD_WSE</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSWOT</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>wse</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-3600" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SWORD_GEOID</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ImportSWOT</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>geoid_hght</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>external historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-3600" end="0"/>
+			<readWriteMode>read only</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<variable>
+		<variableId>SWORD_H</variableId>
+		<timeSeriesSet>
+			<moduleInstanceId>ProcessSWOT</moduleInstanceId>
+			<valueType>scalar</valueType>
+			<parameterId>H.obs</parameterId>
+			<locationSetId>WSC_Gauges</locationSetId>
+			<timeSeriesType>simulated historical</timeSeriesType>
+			<timeStep unit="nonequidistant"/>
+			<relativeViewPeriod unit="day" start="-3600" end="0"/>
+			<readWriteMode>add originals</readWriteMode>
+		</timeSeriesSet>
+	</variable>
+	<transformation id="Transform_SWORD_WSE_to_Datum">
+		<user>
+			<simple>
+				<expression>if(DATUM_TO == 605 || DATUM_TO == 610, 
+									SWORD_WSE + SWORD_GEOID - ELEVATION_WSC - CGVD2013,
+										if(DATUM_TO == 10 || DATUM_TO == 11 || DATUM_TO == 12 || DATUM_TO == 13 || DATUM_TO == 14 || DATUM_TO == 35 || 
+										DATUM_TO == 40 || DATUM_TO == 110 || DATUM_TO == 405 || DATUM_TO == 609 || DATUM_TO == 610,
+										SWORD_WSE + SWORD_GEOID - ELEVATION_WSC - CGVD28, 
+											SWORD_WSE) )
+				</expression>
+				<coefficientSetFunctions>
+					<coefficient id="DATUM_TO" value="@DATUM_TO@"/>
+					<coefficient id="CGVD2013" value="@CGVD2013@"/>
+					<coefficient id="CGVD28" value="@CGVD28@"/>
+					<coefficient id="ELEVATION_WSC" value="@ELEVATION_WSC@"/>
+				</coefficientSetFunctions>
+				<outputVariable>
+					<variableId>SWORD_H</variableId>
+				</outputVariable>
+			</simple>
+		</user>
+	</transformation>
+</transformationModule>
